@@ -1,0 +1,33 @@
+{
+  "name": "js_dev_env",
+  "version": "1.0.0",
+  "description": "min js dev env",
+  "repository": {
+    "url":  "https://github.com/jrezuke/jsDevEnvMin.git"
+  },
+  "scripts": {
+    "prestart": "babel-node buildScripts/startMessage.js",    
+    "start": "npm-run-all --parallel security-check start-server",
+    "start-server":"babel-node buildScripts/srcServer.js",
+    "security-check": "nsp check",
+    "share": "lt --port 3010"
+  },
+  "author": "'Joe_Rezuke'",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-cli": "6.24.1",
+    "babel-core": "6.24.1",
+    "babel-loader": "7.0.0",
+    "babel-preset-latest": "6.24.1",
+    "babel-register": "6.24.1",
+    "chalk": "1.1.3",
+    "express": "^4.15.2",
+    "npm-run-all": "4.0.2",
+    "nsp": "2.6.3",
+    "open": "0.0.5",    
+    "webpack": "1.13.2",
+    "webpack-dev-middleware": "1.8.4",
+    "webpack-hot-middleware": "2.13.0",
+    "webpack-md5-hash": "0.0.5"
+  }
+}
